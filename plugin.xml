@@ -24,33 +24,6 @@
     </js-module>
 
     <!-- android -->
-    <platform name="android">
-        <!-- Cordova >= 3.0.0 -->
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SQLitePlugin">
-                <param name="android-package" value="io.sqlc.SQLitePlugin"/>
-            </feature>
-        </config-file>
-
-        <source-file src="src/android/io/sqlc/SQLitePlugin.java" target-dir="src/io/sqlc"/>
-        <source-file src="src/android/io/sqlc/SQLiteAndroidDatabase.java" target-dir="src/io/sqlc"/>
-        <!-- [FUTURE TBD] ref: litehelpers/Cordova-sqlcipher-adapter#40
-                               litehelpers/Cordova-sqlcipher-adapter#25
-                               sqlcipher/sqlcipher#125
-        <source-file src="src/android/io/sqlc/SQLiteConnectorDatabase.java" target-dir="src/io/sqlc"/>
-
-        <source-file src="node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-connector.jar" target-dir="libs"/>
-         ...
-         -->
-
-        <!-- SQLCipher distribution for Android [jar & native libs]: -->
-        <source-file src="src/android/sqlcipher/libs/sqlcipher.jar" target-dir="libs" />
-        <source-file src="src/android/sqlcipher/libs/armeabi/libsqlcipher.so" target-dir="libs/armeabi" />
-        <source-file src="src/android/sqlcipher/libs/armeabi-v7a/libsqlcipher.so" target-dir="libs/armeabi-v7a" />
-        <source-file src="src/android/sqlcipher/libs/x86/libsqlcipher.so" target-dir="libs/x86" />
-        <source-file src="src/android/sqlcipher/libs/arm64-v8a/libsqlcipher.so" target-dir="libs/arm64-v8a" />
-        <source-file src="src/android/sqlcipher/libs/x86_64/libsqlcipher.so" target-dir="libs/x86_64" />
-    </platform>
 
     <!-- iOS -->
     <platform name="ios">
